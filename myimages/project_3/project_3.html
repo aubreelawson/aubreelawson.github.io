@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quick Ink</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/slider.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+        <style>
+          nav{
+    padding-left:4em;
+    padding-right: 4em;
+    /* TODO: figure out no longer staying fixed */
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index:10;
+  }
+
+  nav ul {
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  nav li{
+    padding: 1em 0;
+    list-style-type: none;
+    padding: 25px;
+    font-size: 1.7em;
+  }
+  
+  nav li a {
+    color: red;
+    font-weight: 600;
+    opacity: 1;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  nav li a:hover {
+    color: black;
+    opacity: 1;
+    text-decoration: none;
+  }
+        </style>
+    </head>
+    <body>
+        <h2> Quick Ink</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="DC7F5B71-531E-471F-9052-CDE79BCF93BC.jpeg" width="400px">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="93EA2A65-AA24-4E0A-B2DC-0DC94EC362EC.jpeg" width="400px">
+            </div>
+            
+            <div class="mySlides fade">
+             <img src="IMG_2789.jpeg" width="400px" >
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+            <p>These works are "quick" ink drawings that serve a purpose of selfcare. 
+              I can find myself feeling uninspired and getting in ruts but I forced myself 
+              to get back into drawing and making. At first it seemed like a task but as I
+              got into the rhythm it became relaxing. I enjoyed knowing that the next day I 
+              would have that hour to myself to create whatever. It didn't have to be a super
+              special or meaningful drawing, it was just that time to decompress and get lost 
+              in the process.</p>
+
+             
+            <script src="script.js" async defer></script>
+            <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    </body>
+</html>

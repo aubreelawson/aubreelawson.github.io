@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Branding</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/slider.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+        <style>
+          nav{
+    padding-left:4em;
+    padding-right: 4em;
+    /* TODO: figure out no longer staying fixed */
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index:10;
+  }
+
+  nav ul {
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  nav li{
+    padding: 1em 0;
+    list-style-type: none;
+    padding: 25px;
+    font-size: 1.7em;
+  }
+  
+  nav li a {
+    color: red;
+    font-weight: 600;
+    opacity: 1;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  nav li a:hover {
+    color: black;
+    opacity: 1;
+    text-decoration: none;
+  }
+        </style>
+    </head>
+    <body>
+        <h2> Branding</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="8x8 logo.png" width="400px">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="Brand Identity 2.png" width="400px">
+            </div>
+            
+            <div class="mySlides fade">
+             <img src="Business-Card-Branding-Mockup.png" width="400px" >
+            </div>
+
+            <div class="mySlides fade">
+              <img src="Clipboard-Office-Brand-Mockup.png" width="400px" >
+             </div>
+
+             <div class="mySlides fade">
+              <img src="Folded-TShirt-Mockup-Template-vol2.png" width="400px" >
+             </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+            <p>For this project we were ask to come up with a product that had to 
+              do with insects/bugs. I drew inspiration from the film Silence of the Lambs 
+              and used the moth as my designated insect. I took a darker take on this product
+              and imagined it being a poisonous sucker (like a ringpop). This is definitely
+              a more underground word of mouth business. I imagined that since this such a 
+              secretive operation that we would keep the products simple, light hearted and 
+              ambiguous. </p>
+
+             
+            <script src="script.js" async defer></script>
+            <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    </body>
+</html>

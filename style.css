@@ -94,7 +94,7 @@ nav{
 
 .box-wrapper{
   height:350px;
-  border-radius: 1%;
+  border-radius: 8%;
 }
 .box1 {
     grid-area: a;
@@ -127,10 +127,11 @@ nav{
     padding-right: .5ch;
 }
 
-
 /* ABOUT ME CSS*/
 .about-me {
     height: 100vh !important;
+    background-image: url(myimages/);
+    background-position: center;
     background-color:rgb(230, 230, 230)!important;
     padding: 20vh 50px 0 50px;
     column-count: 2;
@@ -142,11 +143,17 @@ nav{
   margin-bottom: 4em;
 }
 
+.about-title{
+  font-size: 1.75em;
+  color: red;
+}
 .about-me p{
   text-align: left;
-  font-size:1em;
-  line-height: 1.5rem;
+  font-size:.75em;
+  line-height: 2rem;
+  color: black;
 }
+
 .paragraph2{
   text-indent: 2em;
 }
@@ -163,6 +170,8 @@ nav{
     align-items: center;
     height: 25vh !important;
     padding-bottom: 50vh;
+    background-image: url(myimages/blind-straight.jpeg);
+    background-position: center;
     background-color: rgb(204, 204, 204) !important;
     grid-template-columns: 3fr minmax(2fr, 1fr) minmax(2fr, 1fr) 3fr;
     grid-template-rows: auto;
@@ -172,21 +181,24 @@ nav{
     ;
 }
 
+
 .contact-title {
-    font-size: 1.75em;
+    font-size: 2.5em;
     grid-area: title;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
+    color: red;
 }
 
 .logo-svg {
-    width: 500px;
+    width: 400px;
     grid-area: logo;
-    padding-bottom: 40px;
+    padding-bottom: 90px;
 }
 
 .contact-wrapper {
     grid-area: wrapper;
     font-size: 1.5em;
+    padding-bottom: 90px;
 }
 
 
@@ -226,7 +238,7 @@ nav{
     width:20%;
   }
   footer p{
-    font-size: .5em;
+    font-size: 1em;
     color: red;
   }
 
